@@ -22,7 +22,7 @@ def index():
 
 @app.route('/unixtime')
 def unixtime():
-    return jsonify({"status": "OK", "UnixTime": time.time()})
+    return jsonify({"status": "OK", "UnixTime": time.time(), "ENV": dict(os.environ)})
 
 
 if __name__ == '__main__':
